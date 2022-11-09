@@ -1,0 +1,91 @@
+﻿@page
+@model UI_Assignment_2.Pages.ModifyStudentModel
+@{
+}
+
+@section scriptContent{
+    <script type="text/javascript">
+        let valid = false;
+        function ValidateFind(form) {
+            alert("Find");
+            let errors = ""
+            if (form.StudentID.value.length < 1) {
+                errors += "StudentID cannot be null"
+            }
+            if (errors.length > 0) {
+                alert(errors)
+                valid = false;
+            }
+            return valid
+        }
+
+        function ValidateModify(form) {
+            let errors = ""
+            alert("Modify");
+            if (form.FirstName.value.length < 1) {
+                errors += "\nFirst Name cannot be null"
+            }
+            if (form.LastName.value.length < 1) {
+                errors += "\nLast Namecannot be null"
+            }
+            if (form.Email.value.length > 0)) {
+                errors+= "\nEmail is invalid"
+            }
+            if (errors.length > 0) {
+                alert(errors);
+            }
+            //return valid
+        }
+
+        //function ValidateForm() {
+        //    return false
+        //}
+
+    </script>
+}
+
+<form method="post" name="ModifyForm" onsubmit="return ValidateFind(window.document.ModifyForm);" action="~/TestPost">
+    <table>
+        <tr>
+            <td>
+                Student ID:
+            </td>
+            <td>
+                <input type="text" name="StudentID" value="@Model.StudentID" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <input type="text" name="FirstName" value="@Model.FirstName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <input type="text" name="LastName" value="@Model.LastName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="email" name="Email" value="@Model.Email" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="Submit" value="Find" />
+            </td>
+            <td>
+                <input type="submit" name="Submit" value="Modify" onclick="return ValidateModify(window.document.ModifyForm);" />
+            </td>
+        </tr>
+    </table>
+    @Model.Message
+</form>

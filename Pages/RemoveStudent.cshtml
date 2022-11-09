@@ -1,0 +1,24 @@
+﻿@page
+@model UI_Assignment_2.Pages.RemoveStudentModel
+@{
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                Student ID:
+            </td>
+            <td>
+                <input type="text" value="" asp-for="StudentID" />
+                <span asp-validation-for="StudentID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="Submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+
+</form>

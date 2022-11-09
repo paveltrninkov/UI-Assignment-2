@@ -1,0 +1,58 @@
+﻿@page
+@model UI_Assignment_2.Pages.EnrollStudentModel
+@{
+}
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                StudentID:
+            </td>
+            <td>
+                <input type="text" value="" asp-for="StudentID" />
+                <span asp-validation-for="StudentID"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <input type="text" asp-for="FirstName" value="" />
+                <span asp-validation-for="FirstName"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <input type="text" asp-for="LastName" value="" />
+                <span asp-validation-for="LastName"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="text" asp-for="Email" value="" />
+                <span asp-validation-for="Email"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Program Code:
+            </td>
+            <td>
+                <input type="text" asp-for="ProgramCode" value="" />
+                <span asp-validation-for="ProgramCode"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="Submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+</form>

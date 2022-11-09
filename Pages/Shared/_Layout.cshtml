@@ -2,12 +2,38 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
     <title>@ViewData["Title"]</title>
+    <link href="~/styles/styles.css" rel="stylesheet" />
+    <script src="~/libraries/jquery/jquery.js"></script>
+    <script src="~/libraries/jquery-validate/jquery.validate.js"></script>
+    <script src="~/libraries/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("scriptContent", required:false)
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    <header>
+        <h1><a href="Index">Home</a></h1>
+        <hr />
+        <nav>
+            <a href="Index">Home</a>
+            <a href="CreateProgram">Create Program</a>
+            <a href="EnrollStudent">Enroll Student</a>
+            <a href="FindStudent">Find Student</a>
+            <a href="ModifyStudent">Modify Student</a>
+            <a href="RemoveStudent">Remove Student</a>
+            <a href="FindProgram">Find Program</a>
+        </nav>
+        <hr />
+    </header>
+    <main>
+        <div>
+            @RenderBody()
+        </div>
+    </main>
+    <footer>
+        <hr />
+        <p>Why are you looking here?</p>
+    </footer>
+    
 </body>
 </html>

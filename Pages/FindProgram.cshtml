@@ -1,0 +1,60 @@
+﻿@page
+@model UI_Assignment_2.Pages.FindProgramModel
+@{
+}
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                Program Code:
+            </td>
+            <td>
+                <input type="text" value="" asp-for="ProgramCode" />
+                <span asp-validation-for="ProgramCode"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="Submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                Program Code:
+            </td>
+            <td>
+                @Model.ProgramCode
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Program Description:
+            </td>
+            <td>
+                @Model.ProgramDescription
+            </td>
+        </tr>
+        @foreach(var student in Model.Students)
+            {
+    <tr>
+        <td>
+            Full Name:
+        </td>
+        <td>
+            @student.FirstName @student.LastName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email:
+        </td>
+        <td>
+            @student.Email
+        </td>
+    </tr>
+            }
+    </table>
+</form>

@@ -1,0 +1,38 @@
+﻿body {
+    background-color:cadetblue;
+    color:aliceblue;
+}
+header{
+    position:fixed;
+    padding:0px;
+    height:10%;
+    width:100%;
+    top:0%;
+    bottom:10%;
+}
+main {
+    position: fixed;
+    height: 60%;
+    width: 100%;
+    top: 20%;
+    bottom: 90%;
+}
+footer {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 90%;
+    bottom: 10%
+}
+a{
+    color: aliceblue;
+    text-decoration:none;
+    margin:8px;
+    padding:2px;
+}
+h1{
+    font-size:50px;
+}
+a:hover{
+    background-color:Highlight;
+}
